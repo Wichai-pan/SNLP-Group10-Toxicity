@@ -1,0 +1,20 @@
+id,description,model,training_data,eng_f1,ger_f1,fin_f1,overall_f1
+E00,TF-IDF + LogReg,tfidf+lr,train.tsv,0.905,0.505,0.233,0.861
+E01,XLM-R base,xlm-roberta-base,train.tsv,0.943,0.678,0.748,0.910
+E02,E01 + threshold tuning,xlm-roberta-base,train.tsv,0.944,0.688,0.759,0.910
+E03,Twitter-XLM-R base,twitter-xlm-roberta-base,train.tsv,0.943,0.690,0.533,0.907
+E05,XLM-R base + translate-train,xlm-roberta-base,train_aug.tsv,0.939,0.703,0.777,0.909
+E06,XLM-R base + GermEval,xlm-roberta-base,train_germeval.tsv,0.941,0.721,0.715,0.908
+E07,XLM-R base + back-translation,xlm-roberta-base,train_backtrans.tsv,0.936,0.685,0.743,0.903
+L01,XLM-R large,xlm-roberta-large,train.tsv,0.946,0.720,0.750,0.916
+L02,XLM-R large + translate-train,xlm-roberta-large,train_aug.tsv,0.945,0.706,0.797,0.915
+L03,XLM-R large + GermEval,xlm-roberta-large,train_germeval.tsv,0.948,0.751,0.790,0.919
+L03b,XLM-R large + GermEval seed123,xlm-roberta-large,train_germeval.tsv,0.944,0.748,0.759,0.916
+L05,XLM-R large + translate + GermEval,xlm-roberta-large,train_aug_germeval.tsv,0.942,0.735,0.797,0.912
+L06,XLM-R large + GermEval+GAHD,xlm-roberta-large,train_germeval_gahd.tsv,0.947,0.738,0.778,0.917
+L07,XLM-R large + translate + Suomi24,xlm-roberta-large,train_aug_suomi24.tsv,0.946,0.703,0.274,0.908
+O01,L03 + extended threshold,xlm-roberta-large,---,0.948,0.759,0.822,0.922
+O02,Ensemble L02+L03,xlm-roberta-large,---,0.951,0.745,0.814,0.924
+O03,Ensemble L02+L03+L05,xlm-roberta-large,---,0.950,0.755,0.826,0.925
+O04,Ensemble L02+L03+L03b (best overall),xlm-roberta-large,---,0.951,0.754,0.812,0.926
+O05,Ensemble L02+L06,xlm-roberta-large,---,0.951,0.735,0.813,0.922
